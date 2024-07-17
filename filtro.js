@@ -8,24 +8,25 @@ const productos = [
   {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./zapato-rojo.jpg"}
 ]
 
-const li = document.getElementsByName("lista-de-productos")
-const $i = document.querySelector('.input');
+const li = document.getElementsById("lista-de-productos") /* Se corrige a solicitar por id en vez de name */
+/* const $i =  */document.querySelector('.input'); /* Se quita la variable ya que se dice la referencia */
 
 for (let i = 0; i < productos.length; i++) {
-  var d = document.createElement("div")
+  let d = document.createElement("div") /* Se cambia tipo de variable de var a let */
   d.classList.add("producto")
 
-  var ti = document.createElement("p")
+  let ti = document.createElement("p") /* Se cambia tipo de variable de var a let */
   ti.classList.add("titulo")
   ti.textContent = productos[i].nombre
   
-  var imagen = document.createElement("img");
+  let imagen = document.createElement("img"); /* Se cambia tipo de variable de var a let */
   imagen.setAttribute('src', productos[i].img);
 
   d.appendChild(ti)
   d.appendChild(imagen)
 
   li.appendChild(d)
+  shopContent.append(content);
 }
 
 displayProductos(productos)
@@ -41,14 +42,14 @@ botonDeFiltro.onclick = function() {
   const productosFiltrados = filtrado(productos, texto );
 
   for (let i = 0; i < productosFiltrados.length; i++) {
-    var d = document.createElement("div")
+    let d = document.createElement("div") /* Se cambia tipo de variable de var a let */
     d.classList.add("producto")
   
-    var ti = document.createElement("p")
+    let ti = document.createElement("p") /* Se cambia tipo de variable de var a let */
     ti.classList.add("titulo")
     ti.textContent = productosFiltrados[i].nombre
     
-    var imagen = document.createElement("img");
+    let imagen = document.createElement("img"); /* Se cambia tipo de variable de var a let */
     imagen.setAttribute('src', productosFiltrados[i].img);
   
     d.appendChild(ti)
