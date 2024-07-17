@@ -1,10 +1,16 @@
-.contenedorGeneral{
+/* Se crean estilos para mejor vista en la página */
+body{
+  background-color: rgba(250, 240, 245, 0.747);
+} 
+.contenedorGeneral{ /* Se crean estilos generales */
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-size: medium;
   text-align: center;
+  color:mediumvioletred;
+
 }
 
 input {
@@ -12,6 +18,9 @@ input {
   height: 40px;
   font-size: 18px;
   border-radius: 3px;
+  border-color:darkmagenta; /* Se agrega color */
+  color: rgb(87, 17, 81);/* Se agrega color */
+  border-radius: 10px; /* Se agrega borde redondo para mejorar vista */
 }
 
 button{
@@ -19,23 +28,32 @@ button{
   height: 45px;
   font-size: 18px;
   border-radius: 3px;
+  background-color: rgb(245, 136, 158); /* Se cambia color */
+  border-color: darkmagenta;
+  color: rgb(87, 17, 81);
+  border-radius: 10px; /* Se agrega borde redondo para mejorar vista */
 }
 
 #lista-de-productos {
-  display: flex
+  display: flex;
+  margin: 80px; /* Se utilza margin para centrar los productos */
 }
 
 .producto {
   width: 200px;
   height: 200px;
   margin: 10px;
-  border: 2px solid black;
+  border: 2px solid rgb(245, 136, 158);
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px; /* Se agrega borde redondo para mejorar vista */
+  font-weight: 700; /* Se agrega estilo al texto */
+
 }
 
 .producto img {
   width: 70%;
   height: auto
 }
+

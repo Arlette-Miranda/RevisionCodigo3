@@ -19,7 +19,6 @@ const inputDoc = document.querySelector('input'); /* Se renombra variable ya que
 /* Se define función que se llama al finalizar esta */
 /* Se define el parameto que recibirá la función */
 function displayProductos(objeto) {
-
   /* Se acomoda while dentro de función ya que hace referencia a child que se encuentran en esta funcion */
   while (listaProducto.firstChild) {
     listaProducto.removeChild(listaProducto.firstChild);
@@ -58,35 +57,35 @@ const botonDeFiltro = document.querySelector("button");
 
 botonDeFiltro.onclick = function () {
 
-  const texto = inputDoc.value.toLocaleLowerCase();/* Se agrega lowercase para hacer mínusculas el input del usuario */ 
+  const texto = inputDoc.value.toLocaleLowerCase();/* Se agrega lowercase para hacer mínusculas el input del usuario */
   console.log(texto); ///REVISAR ////
-  
+
   const productosFiltrados = filtrado(productos, texto);
 
   displayProductos(productosFiltrados);
-  
+
   /* Esta segundo for lo cometo para no eliminarlo,
   Pero se eliminaría ya que hace que al realizar el filtro el reusltado se duplique*/
 
-  
- /*  for (let i = 0; i < productosFiltrados.length; i++) {
-    // Se renombra variable para mayor referencia //
-    let divFiltrados = document.createElement("div") // Se cambia tipo de variable de var a let 
-    divFiltrados.classList.add("producto")
-    
-    // Se renombra variable para mayor referencia 
-    let titutloFiltrados = document.createElement("p") // Se cambia tipo de variable de var a let
-    titutloFiltrados.classList.add("titulo")
-    titutloFiltrados.textContent = productosFiltrados[i].nombre
 
-    let imagen = document.createElement("img"); // Se cambia tipo de variable de var a let 
-    imagen.setAttribute('src', productosFiltrados[i].img);
-
-    divFiltrados.appendChild(titutloFiltrados)
-    divFiltrados.appendChild(imagen)
-
-    listaProducto.appendChild(divFiltrados)
-  } */
+  /*  for (let i = 0; i < productosFiltrados.length; i++) {
+     // Se renombra variable para mayor referencia //
+     let divFiltrados = document.createElement("div") // Se cambia tipo de variable de var a let 
+     divFiltrados.classList.add("producto")
+     
+     // Se renombra variable para mayor referencia 
+     let titutloFiltrados = document.createElement("p") // Se cambia tipo de variable de var a let
+     titutloFiltrados.classList.add("titulo")
+     titutloFiltrados.textContent = productosFiltrados[i].nombre
+ 
+     let imagen = document.createElement("img"); // Se cambia tipo de variable de var a let 
+     imagen.setAttribute('src', productosFiltrados[i].img);
+ 
+     divFiltrados.appendChild(titutloFiltrados)
+     divFiltrados.appendChild(imagen)
+ 
+     listaProducto.appendChild(divFiltrados)
+   } */
 
 };
 
